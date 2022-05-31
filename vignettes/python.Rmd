@@ -1,0 +1,17 @@
+---
+title: "python"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{python}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{python, include = FALSE}
+import matplotlib.pyplot as plt
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()
+```
+
+
