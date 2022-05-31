@@ -7,8 +7,20 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-```{python, include = FALSE}
+
+With chunk option `dev=svg`, this throws no errors, but no plot either
+
+```{python, dev = "svg"}
 import matplotlib.pyplot as plt
+plt.plot([1, 2, 3, 4])
+plt.ylabel('some numbers')
+plt.show()
+```
+
+
+With default device, this throws an error
+
+```{python}
 plt.plot([1, 2, 3, 4])
 plt.ylabel('some numbers')
 plt.show()
