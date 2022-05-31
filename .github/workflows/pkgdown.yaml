@@ -28,6 +28,12 @@ jobs:
           extra-packages: pkgdown
           needs: website
 
+      - name: Install Miniconda
+        shell: Rscript {0}
+        run: |
+          reticulate::install_miniconda()
+          reticulate::py_install("matplotlib")
+
       - name: Deploy package
         run: |
           git config --local user.name "$GITHUB_ACTOR"
