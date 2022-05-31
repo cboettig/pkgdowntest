@@ -14,3 +14,11 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: 
+    reticulate
+Config/reticulate:
+  list(
+    packages = list(
+      list(package = "matplotlib")
+    )
+  )
